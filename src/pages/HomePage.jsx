@@ -38,7 +38,7 @@ const HomePage = () => {
             fontSize: 60,
           }}
           className="text-center font-weight-semi-bold"
-        data-aos="zoom-in-up"
+          data-aos="zoom-in-up"
           data-aos-delay="800"
         >
           Welcome to Fab Ceylon
@@ -47,11 +47,11 @@ const HomePage = () => {
 
       <div className="w-100 mx-0  my-5" style={{ padding: "0 30px" }}>
         <Row className="w-100 p-0 mx-0 my-5 text-center text-md-start">
-          <h3 className="mb-2" data-aos="fade-up">
+          <h3 className="mb-3 mt-4" data-aos="fade-up">
             {" "}
             Download Fab Ceylon Mobile App
           </h3>
-          <p className="mb-4" data-aos="fade-up">
+          <p className="mb-5" data-aos="fade-up">
             Stay connected with Fab Ceylon wherever you are! Our mobile app
             brings the full Fab Ceylon shopping experience to your fingertips,
             allowing you to browse, shop, and enjoy exclusive offers with just a
@@ -63,9 +63,13 @@ const HomePage = () => {
             Available on
           </h6>
 
-          <Row className="w-100 my-2" data-aos="fade-up" data-aos-delay="300">
-            <Col sm={12} md={12} lg={6} className="pe-3 my-3">
-              <div className=" d-flex flex-column flex-md-row  p-4 border border-secondary-subtle rounded-4">
+          <Row
+            className="w-100 my-2 justify-content-center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <Col sm={12} md={12} lg={6} xl={6} xxl={6} className="pe-3 my-3">
+              <div className=" d-flex flex-column flex-md-row  p-5 border border-secondary-subtle rounded-4">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                   {" "}
                   <img
@@ -79,7 +83,7 @@ const HomePage = () => {
                   <h4 className=" font-weight-semi-bold ">FAB CEYLON</h4>
                 </div>
                 <div className="ps-0 ps-md-5 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-start">
-                  <h3>Google Play Store</h3>
+                  <h4 className="mb-3">Google Play Store</h4>
                   <h6>
                     Download the Fab Ceylon app on your Android device and enjoy
                     seamless access to our services at your fingertips.
@@ -88,15 +92,15 @@ const HomePage = () => {
                     href="https://play.google.com/store/apps/details?id=com.rhotera.fabceylonapp2"
                     target="blank"
                   >
-                    <Button className="px-5 mt-3" color="success">
+                    <Button className="px-5 mt-4" color="success">
                       Download
                     </Button>
                   </a>
                 </div>
               </div>
             </Col>
-            <Col sm={12} md={12} lg={6} className="pe-3 my-3">
-              <div className=" d-flex flex-column flex-md-row  p-4 border border-secondary-subtle rounded-4">
+            <Col sm={12} md={12} lg={6} xl={6} xxl={6} className="pe-3 my-3">
+              <div className=" d-flex flex-column flex-md-row p-5 border border-secondary-subtle rounded-4">
                 <div className="d-flex flex-column align-items-center justify-content-center">
                   {" "}
                   <img
@@ -110,7 +114,7 @@ const HomePage = () => {
                   <h4 className=" font-weight-semi-bold ">FAB CEYLON</h4>
                 </div>
                 <div className="ps-0 ps-md-5 d-flex flex-column justify-content-center align-items-center align-items-md-start text-center text-md-start">
-                  <h3>Apple App Store</h3>
+                  <h4 className="mb-3">Apple App Store</h4>
                   <h6>
                     Download the Fab Ceylon app on your iPhone or iPad and enjoy
                     seamless access to our services at your fingertips.
@@ -119,7 +123,7 @@ const HomePage = () => {
                     href="https://apps.apple.com/us/app/fab-ceylon/id6738855538"
                     target="blank"
                   >
-                    <Button className="px-5 mt-3" color="success">
+                    <Button className="px-5 mt-4" color="success">
                       Download
                     </Button>
                   </a>
@@ -130,10 +134,10 @@ const HomePage = () => {
         </Row>
 
         <Row className="m-0  p-0 text-center text-md-start">
-          <h3 className="mb-2" data-aos="fade-up">
+          <h3 className="mb-3 mt-4" data-aos="fade-up">
             Fab Ceylon Deals & Best-Sellers
           </h3>
-          <p className="mb-4" data-aos="fade-up">
+          <p className="mb-5" data-aos="fade-up">
             Discover amazing deals and our top-selling products! Fab Ceylon
             offers a wide range of products at unbeatable prices, with fresh
             discounts and exclusive offers regularly updated. Whether you’re
