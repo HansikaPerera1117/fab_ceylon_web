@@ -15,15 +15,41 @@ const NavBar = (args) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(window.location.pathname);
   const toggle = () => setIsOpen(!isOpen);
-  
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div>
       <Navbar
         {...args}
-        expand="md"
+        expand="lg"
         fixed="top"
-        style={{ height: "100px", padding: "0 30px" }}
+        className={`navbar ${scrolled ? "scrolled" : ""}`}
+        style={{
+          height: "100px",
+          padding: "0 30px",
+          background: scrolled ? "rgba(19, 19, 19, 0.77)" : "transparent",
+          boxShadow: scrolled ? "0 4px 30px rgba(0, 0, 0, 0.1)" : "none",
+          backdropFilter: scrolled ? "blur(8.2px)" : "none",
+          WebkitBackdropFilter: scrolled ? "blur(8.2px)" : "none",
+          transition: "all 0.3s ease",
+        }}
       >
         <NavbarBrand
           href="/"
@@ -37,7 +63,9 @@ const NavBar = (args) => {
               width: "auto",
             }}
           />
-          <h4 className="ms-0 ms-sm-3 text-white font-weight-semi-bold ">FAB CEYLON</h4>
+          <h4 className="ms-0 ms-sm-3 text-white font-weight-semi-bold ">
+            FAB CEYLON
+          </h4>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
