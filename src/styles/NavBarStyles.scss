@@ -50,13 +50,16 @@
     background-color: rgba(0, 0, 0, 0.8);
   }
 }
+.navbarCollapse {
+  transition: background-color 0.3s ease;
 
-.navbar-collapse {
-  background: rgba(19, 19, 19, 0.77);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(8.2px);
-  -webkit-backdrop-filter: blur(8.2px);
-  position: relative;
-  top: 30px;
-  padding :20px 0
+  &.scrolled {
+    background: rgba(19, 19, 19, 0.77);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+    position: relative;
+    top: 30px;
+    padding: 20px 0;
+  }
 }

@@ -16,6 +16,7 @@ const NavBar = (args) => {
   const [activeLink, setActiveLink] = useState(window.location.pathname);
   const toggle = () => setIsOpen(!isOpen);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +32,22 @@ const NavBar = (args) => {
     // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 991px)");
+
+    const handleResize = () => {
+      setIsMobile(mediaQuery.matches);
+    };
+
+    // Set the initial state and add listener
+    handleResize();
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
     };
   }, []);
 
@@ -68,7 +85,11 @@ const NavBar = (args) => {
           </h4>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
+        <Collapse
+          isOpen={isOpen}
+          navbar
+          className={`navbarCollapse ${isMobile ? "scrolled" : ""}`}
+        >
           <Nav className="me-auto navBar" navbar>
             {[
               { href: "/", label: "Home" },
