@@ -76,7 +76,6 @@ const ContactUsPage = () => {
             <h1
               className="primary-color font-weight-semi-bold mb-1"
               data-aos="fade-up"
-              data-aos-delay="900"
             >
               Contact Us
             </h1>
@@ -97,11 +96,7 @@ const ContactUsPage = () => {
             </p>
           </Col>
           <Col md={12} lg={7}>
-            <Form
-              onSubmit={handleSubmit}
-             data-aos="zoom-in-up"
-              data-aos-delay="900"
-            >
+            <Form onSubmit={handleSubmit} data-aos="zoom-in-up">
               <Row>
                 <Col sm={12} md={6}>
                   <FormGroup floating>
