@@ -132,7 +132,7 @@ const CommerceDisclosurePage = () => {
                 </h6>
                 <p className="ps-5" data-aos="fade-up">
                   <a href="mailto:Fabceylon@icloud.com" className="linkStyle">
-                    Fabceylon@icloud.com
+                    <u> Fabceylon@icloud.com</u>
                   </a>{" "}
                 </p>
                 <h6 className="font-weight-medium" data-aos="fade-up">

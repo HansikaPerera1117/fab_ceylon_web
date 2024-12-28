@@ -17,6 +17,10 @@ const Routes = [
     path: "/contactUs",
     component: lazy(() => import("../pages/ContactUsPage")),
   },
+  {
+    path: "/tearmsOfService",
+    component: lazy(() => import("../pages/TermsOfServicePage")),
+  },
 ];
 
 export default Routes;
