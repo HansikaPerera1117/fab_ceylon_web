@@ -96,6 +96,7 @@ const NavBar = (args) => {
               { href: "/aboutUs", label: "About Us" },
               { href: "/commerceDisclosure", label: "Commerce Disclosure" },
               { href: "/privacyPolicy", label: "Privacy Policy" },
+              { href: "/tearmsOfService", label: "Terms & Conditions" },
               { href: "/contactUs", label: "Contact Us" },
             ].map((item) => (
               <NavItem key={item.href}>

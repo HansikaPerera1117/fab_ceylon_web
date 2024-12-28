@@ -249,7 +249,7 @@ const PrivacyPolicyPage = () => {
                 <li>
                   Email:{" "}
                   <a href="mailto:Fabceylon@icloud.com" className="linkStyle">
-                    Fabceylon@icloud.com
+                    <u>Fabceylon@icloud.com</u>
                   </a>
                 </li>
                 <li>
